@@ -26,8 +26,8 @@ RUN chmod +x /usr/local/bin/composer
 
 # User for DEV environment
 # Change for the user of virtual machine
-RUN useradd nico -m
-# RUN useradd vmamp -m
+# RUN useradd nico -m
+RUN useradd vmamp -m
 
 # This really helps for running the Symfony console with a docker exec
 WORKDIR /var/www

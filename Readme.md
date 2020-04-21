@@ -21,7 +21,7 @@ Si no vas a usar una máquina virtual sáltate este paso.
 
 ## Instrucciones para crear los contenedores
 
-Para estar alineados con entorno de trabajo que nos encontramos en el cliente vamos establecer la convención de usar el usuario: `vmamp`
+Para estar alineados con el entorno de trabajo que nos vamos a encontrar en el cliente, vamos usar por convención el usuario: `vmamp`
 
 Si no has seguido las instrucciones para crear la máquina virtual y usas otro usuario tenlo en cuenta a la hora de introducir las ordenes en el bash. En el `Dockerfile` en la línea 30 se crea un usuario para poder usarlo dentro del contenedor para que sea idéntico al de la máquina virtual. Es un patch que uso para evitar problemas de permisos entre el host y el contenedor. Tenlo en cuenta por si lo tienes que modificar antes de compilar las imágenes.
 

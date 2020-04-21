@@ -6,15 +6,15 @@ services:
     build: .
     image: altia-php
     ports:
-      - "8088:80"
-      # - "80:80"
+      # - "8088:80"
+      - "80:80"
     restart: always
     environment:
       - APP_ENV=dev
       - DATABASE_URL=mysql://altia:4lt14@altia-db:3306/altia?serverVersion=mariadb-10.4.12
     volumes:
-      - /home/nico/devel/cursos/altia/app:/var/www
-      # - /home/vmamp/projects/altia/app
+      # - /home/nico/devel/cursos/altia/app:/var/www
+      - /home/vmamp/projects/altia/app:/var/www
 
   altia-db:
     image: mariadb:10.4
