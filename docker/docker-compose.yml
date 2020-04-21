@@ -1,0 +1,31 @@
+version: '2'
+services:
+  altia-php:
+    depends_on:
+      - altia-db
+    build: .
+    image: altia-php
+    ports:
+      - "8088:80"
+      # - "80:80"
+    restart: always
+    environment:
+      - APP_ENV=dev
+      - DATABASE_URL=mysql://altia:4lt14@altia-db:3306/altia?serverVersion=mariadb-10.4.12
+    volumes:
+      - /home/nico/devel/cursos/altia/app:/var/www
+      # - /home/vmamp/projects/altia/app
+
+  altia-db:
+    image: mariadb:10.4
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sup3rs3cr3t.
+      MYSQL_DATABASE: altia
+      MYSQL_USER: altia
+      MYSQL_PASSWORD: 4lt14
+
+volumes:
+  db_data: {}
