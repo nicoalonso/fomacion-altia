@@ -110,7 +110,7 @@ apt-get update
 Si en a la hora de ejecutar el `apt-get update` tienes un error, ¡para!, algo estas haciendo mal. Continuamos.
 
 ```bash
-apt-get install -y docker-ce
+apt-get install -y docker-ce docker-compose
 ```
 
 Perfecto ya tenemos docker instalado en nuestro sistema. Pero aun nos falta una tarea para terminar. Queremos que el usuario `vmamp` pueda ejecutar comandos `docker`.
@@ -136,13 +136,15 @@ Para estar alineados con el entorno de trabajo que nos vamos a encontrar en el c
 
 Si no has seguido las instrucciones para crear la máquina virtual y usas otro usuario tenlo en cuenta a la hora de introducir las ordenes en el bash. En el `Dockerfile` en la línea 30 se crea un usuario para poder usarlo dentro del contenedor para que sea idéntico al de la máquina virtual. Es un patch que uso para evitar problemas de permisos entre el host y el contenedor. Tenlo en cuenta por si lo tienes que modificar antes de compilar las imágenes.
 
-Lo primer que tienes que hacer es crear la carpeta que contendrá el proyecto, situarte en ella y clonar el repositorio:
+Lo primer que tienes que hacer es crear la carpeta que contendrá el proyecto, situarte en ella y clonar el repositorio (fíjate que hay un punto al final del comando clone):
 
 ```bash
 mkdir -p /home/vmamp/projects/altia
 cd /home/vmamp/projects/altia
-git clone git@github.com:nicoalonso/formacion-altia.git .
+git clone https://github.com/nicoalonso/formacion-altia.git .
 ```
+
+Antes de nada asegúrate de que no tienes instalado el Apache. Vamos a usar el puerto 80 y si tienes el apache te va dar error.  O bien lo desinstalas o cambias el puerto en el docker-compose.yml línea 10. Por ejemplo: "8080:80" que significa el puerto 80 del container se estará escuchando en el host en el 8080.
 
 Lo siguiente es levantar los contenedores, es un simple comando. Ten en cuenta que primero `docker` va a hacer un build para crear la imagen de PHP y luego levantará los contenedores.
 
@@ -151,7 +153,7 @@ cd /home/vmamp/projects/altia/docker
 docker-compose up -d
 ```
 
-El modificar -d es importante no lo omites. Os aparecerá mucha información en pantalla, es normal, no os asustéis. Al final de hacer el build os debería de aparecer algo como esto:
+El modificar -d es importante no lo omites. Os aparecerá mucha información en pantalla, es normal, no os asustéis. Al final de hacer el build y crear los contenedores, os debería de aparecer algo como esto:
 
 ```bash
 Creating docker_altia-db_1
