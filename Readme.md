@@ -2,14 +2,16 @@
 
 Esqueleto básico para realizar las formaciones de Altia (05/2020).
 
-Consiste en dos contenedores.
+Levantar dos contendores sobre una máquina virtual.
 
 1. Apache + PHP 7.4 y un esqueleto de Symfony 4
 2. Base de datos MariaDb v10.4
 
+# Tabla de Contenidos
 
+1. [Instrucciones para crear una máquina virtual](#1. Instrucciones para crear una máquina virtual)
+2. [Instrucciones para crear los contenedores](#2. Instrucciones para crear los contenedores)
 
-[TOC]
 
 ## 1. Instrucciones para crear una máquina virtual
 
