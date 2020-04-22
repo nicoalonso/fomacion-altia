@@ -16,7 +16,7 @@ Levantar dos contenedores sobre una máquina virtual.
 # Tabla de Contenidos
 
 1. [Instrucciones para crear una máquina virtual](#1-instrucciones-para-crear-una-máquina-virtual)
-    1.1 [Instalar Docker](#11-instalar-docker)
+    1. [Instalar Docker](#11-instalar-docker)
 2. [Instrucciones para crear los contenedores](#2-instrucciones-para-crear-los-contenedores)
 
 
