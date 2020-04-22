@@ -9,6 +9,8 @@ Consiste en dos contenedores.
 
 
 
+[TOC]
+
 ## 1. Instrucciones para crear una máquina virtual
 
 Si no vas a usar una máquina virtual sáltate este paso y vete hasta el punto 2.
@@ -91,6 +93,10 @@ Vamos a apagarlo y vamos a configurar el redireccionamiento de puertos. Esto cre
 Yo he redireccionado los puertos 80, 22 y 3306. Como antes a gusto del consumidor.
 
 Arrancamos la máquina y accedemos con el cliente SSH que más nos guste.
+
+
+
+#### 1.1 Instalar Docker
 
 Vamos a instalar unos paquetes básicos, igual se me olvida alguno. Primero nos cambiamos a root.
 
