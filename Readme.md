@@ -9,8 +9,8 @@ Levantar dos contendores sobre una máquina virtual.
 
 # Tabla de Contenidos
 
-1. [Instrucciones para crear una máquina virtual](#1._Instrucciones_para_crear_una_máquina_virtual)
-2. [Instrucciones para crear los contenedores](#2._Instrucciones_para_crear_los_contenedores)
+1. [Instrucciones para crear una máquina virtual](#1-instrucciones-para-crear-una-máquina-virtual)
+2. [Instrucciones para crear los contenedores](#2-instrucciones-para-crear-los-contenedores)
 
 
 ## 1. Instrucciones para crear una máquina virtual
