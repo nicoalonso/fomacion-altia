@@ -155,7 +155,7 @@ Para estar alineados con el entorno de trabajo que nos vamos a encontrar en el c
 
 Si no has seguido las instrucciones para crear la máquina virtual y usas otro usuario tenlo en cuenta a la hora de introducir las ordenes en el bash. En el `Dockerfile` en la línea 30 se crea un usuario para poder usarlo dentro del contenedor para que sea idéntico al de la máquina virtual. Es un patch que uso para evitar problemas de permisos entre el host y el contenedor. Tenlo en cuenta por si lo tienes que modificar antes de compilar las imágenes.
 
-Lo primer que tienes que hacer es crear la carpeta que contendrá el proyecto, situarte en ella y clonar el repositorio (**fíjate que hay un punto al final del comando clone**):
+Lo primero que tienes que hacer es crear la carpeta que contendrá el proyecto, sitúate en ella y clona el repositorio (**fíjate que hay un punto al final del comando clone**):
 
 ```bash
 mkdir -p /home/vmamp/projects/altia
