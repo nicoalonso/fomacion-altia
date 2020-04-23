@@ -124,6 +124,7 @@ No debemos instalar docker de los repositorios oficiales de debian, ya que los p
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 apt-get update
+apt-cache policy docker-ce
 ```
 
 Si a la hora de ejecutar el `apt-get update` tienes un error, **¡para!**, algo estas haciendo mal. Continuamos.
